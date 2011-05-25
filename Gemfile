@@ -6,7 +6,7 @@ gem 'rails', '3.0.7'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-
+gem 'devise', '1.3.4'
 gem 'nifty-generators', '>= 0.4.0'
 
 # Use unicorn as the web server
@@ -31,3 +31,4 @@ gem 'nifty-generators', '>= 0.4.0'
 # group :development, :test do
 #   gem 'webrat'
 # end
+gem "mocha", :group => :test
