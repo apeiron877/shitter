@@ -1,4 +1,10 @@
 Shitter::Application.routes.draw do
+  get "pages/home"
+
+  get "pages/contact"
+
+  get "pages/about"
+
   resources :microposts
 
   devise_for :users
@@ -52,7 +58,7 @@ Shitter::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-   root :to => "microposts#index"
+   root :to => "pages#home"
 
   # See how all your routes lay out with "rake routes"
 
