@@ -4,8 +4,14 @@ Shitter::Application.routes.draw do
   get "pages/contact"
 
   get "pages/about"
+  
+  get "pages/help"
+  
+  match "profile" => "users#show"
 
-  resources :microposts
+  resources :microposts, :only => [:create, :destroy]
+  
+  resources :users, :only => [:show, :index, :destroy]
 
   devise_for :users, :path_names => { :sign_up => :register }
 

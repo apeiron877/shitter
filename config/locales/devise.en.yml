@@ -8,15 +8,15 @@ en:
       already_confirmed: "was already confirmed, please try signing in"
       not_locked: "was not locked"
       not_saved:
-        one: "1 error prohibited this %{resource} from being saved:"
-        other: "%{count} errors prohibited this %{resource} from being saved:"
+        one: "1 shitty error prohibited this %{resource} from being saved:"
+        other: "%{count} shitty errors prohibited this %{resource} from being saved:"
 
   devise:
     failure:
-      already_authenticated: 'You are already signed in.'
-      unauthenticated: 'You need to sign in or sign up before continuing.'
+      already_authenticated: 'You are already signed in, shit for brains.'
+      unauthenticated: 'You need to sign in or sign up before continuing, shithead.'
       unconfirmed: 'You have to confirm your account before continuing.'
-      locked: 'Your account is locked.'
+      locked: 'Hey shithead, your account is locked.'
       invalid: 'Invalid email or password.'
       invalid_token: 'Invalid authentication token.'
       timeout: 'Your session expired, please sign in again to continue.'

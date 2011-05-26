@@ -9,23 +9,31 @@
   </head>
   <body>
     <div id="container">
-			<div id="top_nav">
-			  <div id="top_nav_left">
+			<div id="header">
+			  <div id="header_left">
 					<div id="logo">
 						<%= link_to (image_tag "shitter_logo.png", {:width => "350" }), '/' %>
 					</div>
 			  </div>
-				<div id="top_nav_right">
+				<div id="header_right">
 					<div id="session_status">
 						<% if user_signed_in? %>
-							Signed in as <%= current_user.email %>. Not you? 
+							Hi <%= current_user.username %>! Not you? 
 							<%= link_to "Sign out", destroy_user_session_path %>
 						<% else %>
 							<%= render :partial => "devise/sessions/login" %>
 						<% end %>
 					</div>
-					<div id="top_buttons">
-					<h2> It's Shitty Twitter!™ </h2>
+					<div id="subtitle">
+						<h2> It's Shitty Twitter!™ </h2>
+					</div>
+					<div id="top_nav">
+					 	<ul id="top_nav_list">
+						<li><%= link_to "Home", users_path %></li>
+						<li><%= link_to "Profile", current_user %></li>
+						<li><%= link_to "Settings", edit_user_registration_path %></li>
+						<li><%= link_to "Help", pages_help_path %></li>
+					</ul>
 					</div>
 				</div>
 			</div>

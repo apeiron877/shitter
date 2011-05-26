@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :username, :password_confirmation, :remember_me
   
   # Validations
-  validates :username, :presence => true, :length => { :maximum => 50 }
+  validates :username, :presence => true, :length => { :maximum => 16 }
   
 
 end

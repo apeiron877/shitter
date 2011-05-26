@@ -1,9 +1,10 @@
 <% if user_signed_in? %>
-<p>  Hello <%= current_user.username %>! Welcome to Shitter: It's Shitty Twitter!</p>
+<p>  Hello <%= current_user.username %>! Welcome back to Shitter!</p>
 <% else %>
   <div id="sign_up_box">
   <p>
-  This is the home page for Shitter: It's Shitty Twitter! 
+  Welcome to Shitter: It's Shitty Twitter™! Click the Signup button to 
+  create an account, and let's get this shit rolling!
   </p>
   <%= link_to "Sign up", new_user_registration_path %>
 	</div>

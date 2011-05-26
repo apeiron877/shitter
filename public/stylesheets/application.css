@@ -18,12 +18,12 @@ a {
   overflow: hidden;
 }
 
-#top_nav {
+#header {
   /*border: solid 1px red; */ 
   height: 130px;
   }
 
-#top_nav_left {
+#header_left {
   /*border: solid 1px green; */
   transform: translate(-100px,0px);
 	-ms-transform: translate(-100px,0px); /* IE 9 */
@@ -32,7 +32,7 @@ a {
 	-moz-transform: translate(-100px,0px); /* Firefox */
 }
 
-#top_nav_right {
+#header_right {
   /*border: solid 1px blue; */
 }
 	
@@ -41,7 +41,7 @@ a {
 	/*border: solid 1px black; */
 	}
 
-#top_buttons{
+#subtitle{
 	float: left;
 	transform: translate(-250px,-45px) rotate(10deg);
 	-ms-transform: translate(-250px,-45px) rotate(10deg); /* IE 9 */
@@ -58,7 +58,7 @@ a {
 	/*border: solid 1px black; */ 
 }
 
-#top_buttons:hover {
+#subtitle:hover {
 	z-index: 999;
 	border-color: #6A6A6A;
 	-webkit-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
@@ -83,7 +83,7 @@ input.sign_up_field{
 
 #container {
   /*position: relative;  Delete if causes trouble!*/
-  width: 75%;
+  width: 768px;/*75%;*/
   margin: 0 auto;
   background-color: #FFF;
   padding: 20px 40px;
@@ -143,53 +143,98 @@ input.sign_up_field{
 
 #bottom_nav
 {
-margin-left: auto;
-margin-right: auto;
-margin-bottom: 40px;
-margin-top: 40px;
-border-top: 1px solid #999;
-z-index: 1;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 40px;
+	margin-top: 40px;
+	border-top: 1px solid #999;
+	z-index: 1;
 }
 
 #bottom_nav ul
 {
-list-style-type: none;
-text-align: center;
-margin-top: -8px;
-padding: 0;
-position: relative;
-z-index: 2;
+	list-style-type: none;
+	text-align: center;
+	margin-top: -8px;
+	padding: 0;
+	position: relative;
+	z-index: 2;
 }
 
 #bottom_nav li
 {
-display: inline;
-text-align: center;
-margin: 0 5px;
+	display: inline;
+	text-align: center;
+	margin: 0 5px;
 }
 
 #bottom_nav li a
 {
-padding: 1px 7px;
-color: #666;
-background-color: #fff;
-border: 1px solid #ccc;
-border-radius:25px;
--moz-border-radius:25px; /* Firefox 3.6 and earlier */
-text-decoration: none;
+	padding: 1px 7px;
+	color: #666;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius:25px;
+	-moz-border-radius:25px; /* Firefox 3.6 and earlier */
+	text-decoration: none;
 }
 
 #bottom_nav li a:hover
 {
-color: #000;
-border: 1px solid #00CCFF;
-border-top: 2px solid #00CCFF;
-border-bottom: 2px solid #00CCFF;
+	color: #000;
+	border: 1px solid #00CCFF;
+	border-top: 2px solid #00CCFF;
+	border-bottom: 2px solid #00CCFF;
 }
 
+#top_nav ul
+{
+	transform: translate(20px,80px) scale(1.09);
+	-ms-transform: translate(20px,80px) scale(1.09); /* IE 9 */
+	-webkit-transform: translate(20px,80px) scale(1.09); /* Safari and Chrome */
+	-o-transform: translate(20px,80px) scale(1.09); /* Opera */
+	-moz-transform: translate(20px,80px) scale(1.09); /* Firefox */
+	z-index: 99;
+	margin-left: 0;
+	padding-left: 0;
+	white-space: nowrap;
+}
+
+#top_nav li
+{
+	display: inline;
+	list-style-type: none;
+}
+
+#top_nav a {
+	padding: 6px 15px;
+	margin: 5px 5px;
+ }
+
+#top_nav a:link, #top_nav a:visited
+{
+	color: #fff;
+	background-color: #00DDFF;
+	text-decoration: none;
+	border: solid 1px black;
+  border-radius:25px;
+  -moz-border-radius:25px; /* Firefox 3.6 and earlier */
+}
+
+#top_nav a:hover
+{
+	color: #fff;
+	background-color: #00CCFF;
+	text-decoration: none;
+	-webkit-box-shadow: 10px 10px 15px rgba(0,0, 0, 0.4);
+	-moz-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+	box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+}
+
+
 img.shit_bird {
-border-radius:25px;
--moz-border-radius:25px; /* Firefox 3.6 and earlier */
-text-style: center;
+	border-radius:25px;
+	-moz-border-radius:25px; /* Firefox 3.6 and earlier */
+	text-style: center;
 }
 
