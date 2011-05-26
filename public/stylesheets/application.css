@@ -1,5 +1,5 @@
 body {
-  background-color: #4B7399;
+  background-color: #00CCFF; /* #4B7399; */
   font-family: Verdana, Helvetica, Arial;
   font-size: 14px;
 }
@@ -19,37 +19,70 @@ a {
 }
 
 #top_nav {
-  
+  /*border: solid 1px red; */ 
+  height: 130px;
+  }
 
-
+#top_nav_left {
+  /*border: solid 1px green; */
+  transform: translate(-100px,0px);
+	-ms-transform: translate(-100px,0px); /* IE 9 */
+	-webkit-transform: translate(-100px,0px); /* Safari and Chrome */
+	-o-transform: translate(-100px,0px); /* Opera */
+	-moz-transform: translate(-100px,0px); /* Firefox */
 }
 
-#sign_in_box {
-	float: right;
-	}
+#top_nav_right {
+  /*border: solid 1px blue; */
+}
 	
 #session_status {
 	float: right;
-	}
-	
-#logo {
-	float: left;
+	/*border: solid 1px black; */
 	}
 
-input.sign_in_button{
-  width: auto;
-  
+#top_buttons{
+	float: left;
+	transform: translate(-250px,-45px) rotate(10deg);
+	-ms-transform: translate(-250px,-45px) rotate(10deg); /* IE 9 */
+	-webkit-transform: translate(-250px,-45px) rotate(10deg); /* Safari and Chrome */
+	-o-transform: translate(-250px,-45px) rotate(10deg); /* Opera */
+	-moz-transform: translate(-250px,-45px) rotate(10deg); /* Firefox */
+	z-index: 99;
+	
+	-webkit-box-shadow: 2px 2px 4px rgba(0,0, 0, 0.3);
+	-moz-box-shadow: 2px 2px 4px rgba(0,0, 0, 0.3);
+	box-shadow: 2px 2px 4px rgba(0,0, 0, 0.3);
+
+	-webkit-transition: all 0.5s ease-in;
+	/*border: solid 1px black; */ 
 }
+
+#top_buttons:hover {
+	z-index: 999;
+	border-color: #6A6A6A;
+	-webkit-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+	-moz-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+	box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+	-webkit-transform: translate(-250px,-45px) rotate(0deg) scale(1.05);
+	-moz-transform: translate(-250px,-45px) rotate(0deg) scale(1.05);
+	transform: translate(-250px,-45px) rotate(0deg) scale(1.05);	
+}
+
+
+#logo {
+	float: left;
+	/*border: solid 1px black; */
+	}
 
 input.sign_up_field{
 	width: 140px;
   border-radius:25px;
   -moz-border-radius:25px; /* Firefox 3.6 and earlier */
-  onFocus="clearText(this)" onBlur="clearText(this)"
 }
 
 #container {
-  position: relative; /* Delete if causes trouble!*/
+  /*position: relative;  Delete if causes trouble!*/
   width: 75%;
   margin: 0 auto;
   background-color: #FFF;
@@ -149,12 +182,14 @@ text-decoration: none;
 #bottom_nav li a:hover
 {
 color: #000;
-border: 1px solid #666;
-border-top: 2px solid #666;
-border-bottom: 2px solid #666;
+border: 1px solid #00CCFF;
+border-top: 2px solid #00CCFF;
+border-bottom: 2px solid #00CCFF;
 }
 
-
-
-
+img.shit_bird {
+border-radius:25px;
+-moz-border-radius:25px; /* Firefox 3.6 and earlier */
+text-style: center;
+}
 

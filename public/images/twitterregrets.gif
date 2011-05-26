@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Photobucket Login</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <script type="text/javascript">
+        var gomez = {"acctId":"CAEA4E","pgId":"PB Maintenance","grpId":""};
+        gomez['gs'] = new Date().getTime();
+        </script>
+        <script src="/include/js/gomez/gomez.js" type="text/javascript"></script>
+    </head>
+    <body bgcolor="#f0f0f0">
+        <table width="100%">
+            <tr>
+                <td height="150"/>
+            </tr>
+            <tr>
+                <td valign="top">
+                    <center>
+                        <font face="verdana,arial,helvetica" size="+2" color="#1c64b4">
+                            <b>Photobucket Site Maintenance</b><br/><br/>
+                        </font>
+                        <img src="http://pic.photobucket.com/logos/PbLogo_noBubble_232.gif" alt="logo"/><br/><br/><br/>
+						<div style="width: 700px; text-align: left">
+	                        <font face="verdana,arial,helvetica" size="+1">
+	                            <h2 style="color:#1c64b4">New Maintenance Update</h2>
+
+Photobucket customers,
+<br/><br/>
+If you are experiencing difficulties accessing Photobucket, 
+or are receiving an error message in place of your photos, 
+please refer to our blog at <a href="http://blog.photobucket.com">http://blog.photobucket.com</a> 
+for the latest information regarding the hardware issue still affecting some users. 
+We will update the blog as we have more information about the resolution of this issue.
+<br/><br/><br/>
+Thank you,
+<br/><br/>
+The Photobucket team.
+	                        </font>
+						</div>
+                    </center>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
