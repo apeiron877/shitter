@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Shitter: It's Shitty Twitter! | <%= @title %></title>
+    <title>Shitter: It's Shitty Twitter! | <%= yield(:title) || "Welcome to Shitter" %></title>
     <%= stylesheet_link_tag "application" %>
     <%= javascript_include_tag :defaults %>
     <%= csrf_meta_tag %>
@@ -9,19 +9,38 @@
   </head>
   <body>
     <div id="container">
-	  <div id="user_nav">
-		<% if user_signed_in? %>
-		  Signed in as <%= current_user.email %>. Not you?
-		  <%= link_to "Sign out", destroy_user_session_path %>
-		<% else %>
-		  <%= link_to "Sign up", new_user_registration_path %> or 
-		  <%= link_to "Sign in", new_user_session_path %>.
-		<% end %>
-      <% flash.each do |name, msg| %>
-        <%= content_tag :div, msg, :id => "flash_#{name}" %>
-      <% end %>
-      <%= content_tag :h1, yield(:title) if show_title? %>
-      <%= yield %>
+			<div id="top_nav">
+			  <div id="logo">
+					<%= link_to (image_tag "shitter_logo.png", {:width => "128" }), '/' %>
+				</div>
+				<div id="session_status">
+					<% if user_signed_in? %>
+					  Signed in as <%= current_user.email %>. Not you? 
+						<%= link_to "Sign out", destroy_user_session_path %>
+					<% else %>
+					  <%= render :partial => "devise/sessions/login" %>
+					  <!--
+						<%= link_to "Sign in", new_user_session_path %>
+						-->
+					<% end %>
+				</div>
+			</div>
+			<hr>
+			<div id="notices">
+					<% flash.each do |name, msg| %>
+						<%= content_tag :div, msg, :id => "flash_#{name}" %>
+					<% end %>
+		  </div>
+			<div id="content">
+					<%= content_tag :h1, yield(:title) if show_title? %>
+					<%= yield %>
+				</div>
+			<div id="bottom_nav">
+					<ul id="bottom_nav_list">
+						<li><%= link_to "About", pages_about_path %></li>
+						<li><%= link_to "Contact", pages_contact_path %></li>
+					</ul>
+		  </div>
     </div>
   </body>
 </html>

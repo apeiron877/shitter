@@ -1,4 +1,12 @@
-<h1>Shitter</h1>
-<p>
-  This is the home page for Shitter: It's Shitty Twitter!
-</p>
+<% title "Home" %>
+<% if user_signed_in? %>
+<p>  Hello <%= current_user.username %>! Welcome to Shitter: It's Shitty Twitter!</p>
+<% else %>
+  <div id="sign_up_box">
+  <p>
+  This is the home page for Shitter: It's Shitty Twitter! 
+  </p>
+  <%= link_to "Sign up", new_user_registration_path %>
+	</div>
+<% end %>
+
