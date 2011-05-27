@@ -1,45 +1,26 @@
 class MicropostsController < ApplicationController
-  before_filter :authenticate_user!, :except => [:show, :index]
-  
-  
-  
-  def index
-    @microposts = Micropost.all
-  end
-
-  def show
-    @micropost = Micropost.find(params[:id])
-  end
-
-  def new
-    @micropost = Micropost.new
-  end
+  before_filter :authenticate_user!, :only => [:create, :destroy]
+  before_filter :authorized_user, :only => :destroy
 
   def create
-    @micropost = Micropost.new(params[:micropost])
+    @micropost  = current_user.microposts.build(params[:micropost])
     if @micropost.save
-      redirect_to @micropost, :notice => "Successfully created micropost."
+      flash[:success] = "Micropost created!"
+      redirect_to root_path
     else
-      render :action => 'new'
+      render 'pages/home'
     end
   end
-
-  def edit
-    @micropost = Micropost.find(params[:id])
-  end
-
-  def update
-    @micropost = Micropost.find(params[:id])
-    if @micropost.update_attributes(params[:micropost])
-      redirect_to @micropost, :notice  => "Successfully updated micropost."
-    else
-      render :action => 'edit'
-    end
-  end
-
+  
   def destroy
-    @micropost = Micropost.find(params[:id])
     @micropost.destroy
-    redirect_to microposts_url, :notice => "Successfully destroyed micropost."
+    redirect_to pages_home_path
   end
+
+  private
+
+    def authorized_user
+      @micropost = Micropost.find(params[:id])
+      redirect_to root_path unless current_user = (@micropost.user)
+    end
 end

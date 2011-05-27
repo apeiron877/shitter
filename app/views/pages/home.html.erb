@@ -1,5 +1,17 @@
 <% if user_signed_in? %>
-<p>  Hello <%= current_user.username %>! Welcome back to Shitter!</p>
+<table class="front" summary="For signed-in users">
+    <tr>
+      <td class="main">
+        <h1 class="micropost">What's up?</h1>
+        <%= render 'shared/micropost_form' %>
+        <%= render 'shared/feed' %>
+      </td>
+      </td>
+      <td class="sidebar round">
+        <%= render 'shared/user_info' %>
+      </td>
+    </tr>
+  </table>
 <% else %>
   <div id="sign_up_box">
   <p>

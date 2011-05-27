@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  has_many :microposts
+  has_many :microposts, :dependent => :destroy
 
 
 
@@ -13,6 +13,12 @@ class User < ActiveRecord::Base
   
   # Validations
   validates :username, :presence => true, :length => { :maximum => 30 }
+  
+   def feed
+    # This is preliminary. See Chapter 12 for the full implementation.
+    Micropost.where("user_id = ?", id)
+  end
+  
   
 
 end
