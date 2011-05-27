@@ -1,4 +1,10 @@
 Shitter::Application.routes.draw do
+  resources :supports, :only => [:new, :create] 
+  resources :microposts, :only => [:create, :destroy]
+  resources :users, :only => [:show, :index, :destroy],
+										:path_names => { :users => :show }
+  devise_for :users, :path_prefix => 'd', :path_names => { :sign_up => :register }
+  
   get "pages/home"
 
   get "pages/contact"
@@ -7,14 +13,12 @@ Shitter::Application.routes.draw do
   
   get "pages/help"
   
-  match "profile" => "users#show"
+  match "profile" => "current_user_path"
+  match "contact" => "supports#new"
 
-  resources :microposts, :only => [:create, :destroy]
   
-  resources :users, :only => [:show, :index, :destroy],
-										:path_names => { :users => :show }
 
-  devise_for :users, :path_prefix => 'd', :path_names => { :sign_up => :register }
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
