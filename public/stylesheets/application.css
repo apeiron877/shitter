@@ -226,9 +226,9 @@ input.sign_up_field{
 	color: #fff;
 	background-color: #00CCFF;
 	text-decoration: none;
-	-webkit-box-shadow: 10px 10px 15px rgba(0,0, 0, 0.4);
-	-moz-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
-	box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+	-webkit-box-shadow: 2px 2px 2px rgba(0,0, 0, 0.4);
+	-moz-box-shadow: 2px 2px 2px rgba(0,0, 0, 0.4);
+	box-shadow: 2px 2px 2px  rgba(0,0, 0, 0.4);
 }
 
 
@@ -237,4 +237,27 @@ img.shit_bird {
 	-moz-border-radius:25px; /* Firefox 3.6 and earlier */
 	text-style: center;
 }
+
+table.profile {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+td.main {
+  width: 70%;
+  padding: 1em;
+}
+
+td.sidebar {
+  width: 30%;
+  padding: 1em;
+  vertical-align: top;
+  background: #ffc;
+}
+
+.profile img.gravatar {
+  border: 1px solid #999;
+  margin-bottom: -15px;
+}
+
 

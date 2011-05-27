@@ -9,9 +9,9 @@ gem 'sqlite3'
 gem 'devise', '1.3.4'
 gem 'nifty-generators', '>= 0.4.0'
 gem 'omniauth'
-gem 'simple_form'
-
-
+# gem 'simple_form'
+gem 'gravatar_image_tag'
+gem 'will_paginate', '3.0.pre2'
 
 
 
@@ -38,7 +38,8 @@ gem 'simple_form'
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:
-# group :development, :test do
+  group :development, :test do
 #   gem 'webrat'
-# end
+		gem 'faker'
+ end
 gem "mocha", :group => :test

@@ -11,9 +11,10 @@ Shitter::Application.routes.draw do
 
   resources :microposts, :only => [:create, :destroy]
   
-  resources :users, :only => [:show, :index, :destroy]
+  resources :users, :only => [:show, :index, :destroy],
+										:path_names => { :users => :show }
 
-  devise_for :users, :path_names => { :sign_up => :register }
+  devise_for :users, :path_prefix => 'd', :path_names => { :sign_up => :register }
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -29,10 +29,17 @@
 					</div>
 					<div id="top_nav">
 					 	<ul id="top_nav_list">
-						<li><%= link_to "Home", users_path %></li>
+						<% if user_signed_in? %>
 						<li><%= link_to "Profile", current_user %></li>
-						<li><%= link_to "Settings", edit_user_registration_path %></li>
+						<% else %>
+						<li><%= link_to "Sign In", new_user_session_path %></li>
+						<li><%= link_to "Sign Up", new_user_registration_path %></li>
+						<% end %>
+						<li><%= link_to "Home", users_path %></li>
 						<li><%= link_to "Help", pages_help_path %></li>
+						<% if user_signed_in? %>
+						<li><%= link_to "Sign Out", destroy_user_session_path %></li>
+						<% end %>
 					</ul>
 					</div>
 				</div>
